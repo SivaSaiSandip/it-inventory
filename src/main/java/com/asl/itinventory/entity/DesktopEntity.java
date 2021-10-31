@@ -1,4 +1,10 @@
 package com.asl.itinventory.entity;
+
+import lombok.Data;
+
+import javax.persistence.*;
+import java.util.Date;
+
 @Data
 @Entity
 @Table(name = "desktop", schema = "inventory")

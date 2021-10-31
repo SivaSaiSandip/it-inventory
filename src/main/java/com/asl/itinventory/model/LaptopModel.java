@@ -1,5 +1,9 @@
 package com.asl.itinventory.model;
 
+import lombok.Data;
+
+import java.util.Date;
+
 @Data
 public class LaptopModel {
     private Long laptopId;
