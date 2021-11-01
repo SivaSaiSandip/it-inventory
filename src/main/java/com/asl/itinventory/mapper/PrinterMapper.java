@@ -10,4 +10,5 @@ import java.util.List;
 public interface PrinterMapper {
   PrinterEntity mapPrinterEntityFromModel(PrinterModel printerModel);
   List<PrinterModel> mapPrinterModelsFromEntities(List<PrinterEntity> printerEntityList);
+  PrinterModel mapPrinterModelsFromEntities(PrinterEntity printerEntity);
 }

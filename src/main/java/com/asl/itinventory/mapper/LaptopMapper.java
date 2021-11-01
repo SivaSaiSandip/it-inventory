@@ -9,4 +9,6 @@ import java.util.List;
 public interface LaptopMapper {
   LaptopEntity mapLaptopEntityFromModel(LaptopModel laptopModel);
   List<LaptopModel> mapLaptopModelsFromEntities(List<LaptopEntity> laptopEntityList);
+   LaptopModel mapLaptopModelsFromEntities(LaptopEntity laptopEntity);
+
 }

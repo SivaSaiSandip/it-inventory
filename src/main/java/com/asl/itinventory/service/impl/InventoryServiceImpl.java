@@ -6,6 +6,7 @@ import com.asl.itinventory.model.DesktopModel;
 import com.asl.itinventory.repository.InventoryDao;
 import com.asl.itinventory.service.InventoryService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,9 @@ public class InventoryServiceImpl implements InventoryService {
         
   @Override        
   public void saveDesktopEntry(DesktopModel desktopModel){
-      DesktopEntity desktopEntity = desktopMapper.mapDesktopEntityFromModel(desktopModel);
+   //   DesktopEntity desktopEntity = new DesktopEntity();
+     //         BeanUtils.copyProperties(desktopEntity,desktopModel);
+     DesktopEntity desktopEntity = desktopMapper.mapDesktopEntityFromModel(desktopModel);
       inventoryDao.saveDesktopEntity(desktopEntity);
   }
   @Override
