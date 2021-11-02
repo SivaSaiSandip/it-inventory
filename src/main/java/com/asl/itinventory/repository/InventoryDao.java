@@ -1,6 +1,8 @@
 package com.asl.itinventory.repository;
 
 import com.asl.itinventory.entity.DesktopEntity;
+import com.asl.itinventory.entity.PrinterEntity;
+import com.asl.itinventory.entity.LaptopEntity;
 
 import java.util.List;
 
