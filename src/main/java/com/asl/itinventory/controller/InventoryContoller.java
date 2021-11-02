@@ -1,6 +1,8 @@
 package com.asl.itinventory.controller;
 
 import com.asl.itinventory.model.DesktopModel;
+import com.asl.itinventory.model.PrinterModel;
+import com.asl.itinventory.model.LaptopModel;
 import com.asl.itinventory.service.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
