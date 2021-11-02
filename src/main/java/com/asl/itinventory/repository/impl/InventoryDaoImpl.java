@@ -1,6 +1,8 @@
 package com.asl.itinventory.repository.impl;
 
 import com.asl.itinventory.entity.DesktopEntity;
+import com.asl.itinventory.entity.PrinterEntity;
+import com.asl.itinventory.entity.LaptopEntity;
 import com.asl.itinventory.repository.DesktopRepository;
 import com.asl.itinventory.repository.PrinterRepository;
 import com.asl.itinventory.repository.LaptopRepository;
