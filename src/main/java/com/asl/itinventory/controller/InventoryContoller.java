@@ -29,4 +29,32 @@ public class InventoryContoller {
         return new ResponseEntity<Object>(desktopModelList, HttpStatus.OK);
     }
 
+  @PostMapping("/save-printer-details")
+    public ResponseEntity<Object> savePrinterDetails(@RequestBody PrinterModel printerModel){
+      
+        inventoryService.savePrinterEntry(printerModel);
+        return new ResponseEntity<Object>("Success", HttpStatus.OK);
+    }
+
+  @GetMapping("/get-printer-details")
+    public ResponseEntity<Object> getPrinterDetails() {
+      
+        List<PrinterModel> printerModelList  = inventoryService.getAllPrinterEntries();
+        return new ResponseEntity<Object>(printerModelList, HttpStatus.OK);
+    }
+  
+  @PostMapping("/save-laptop-details")
+    public ResponseEntity<Object> saveLaptopDetails(@RequestBody LaptopModel laptopModel){
+      
+        inventoryService.saveLaptopEntry(laptopModel);
+        return new ResponseEntity<Object>("Success", HttpStatus.OK);
+    }
+
+  @GetMapping("/get-laptop-details")
+    public ResponseEntity<Object> getLaptopDetails() {
+      
+        List<LaptopModel> laptopModelList  = inventoryService.getAllLaptopEntries();
+        return new ResponseEntity<Object>(laptopModelList, HttpStatus.OK);
+    }
+
 }
