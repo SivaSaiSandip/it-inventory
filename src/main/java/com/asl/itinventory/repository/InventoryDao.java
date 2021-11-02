@@ -10,4 +10,12 @@ public interface InventoryDao {
   
   List<DesktopEntity> getAllDesktopEntities();
   
+  void savePrinterEntity(PrinterEntity printerEntity);
+  
+  List<PrinterEntity> getAllPrinterEntities();
+  
+  void saveLaptopEntity(LaptopEntity laptopEntity);
+  
+  List<LaptopEntity> getAllLaptopEntities();
+  
 }
