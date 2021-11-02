@@ -5,7 +5,7 @@ import com.asl.itinventory.model.LaptopModel;
 import org.mapstruct.Mapper;
 import java.util.List;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface LaptopMapper {
   LaptopEntity mapLaptopEntityFromModel(LaptopModel laptopModel);
   List<LaptopModel> mapLaptopModelsFromEntities(List<LaptopEntity> laptopEntityList);
