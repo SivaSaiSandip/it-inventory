@@ -44,23 +44,23 @@ public class InventoryServiceImpl implements InventoryService {
   
    @Override        
   public void savePrinterEntry(PrinterModel printerModel){
-     PrinterEntity printerEntity = printerMapper.mapLaptopEntityFromModel(printerModel);
+     PrinterEntity printerEntity = printerMapper.mapPrinterEntityFromModel(printerModel);
       inventoryDao.savePrinterEntity(printerEntity);
   }
   @Override
   public List<PrinterModel> getAllPrinterEntries(){
       List<PrinterEntity> printerEntityList = inventoryDao.getAllPrinterEntities();
-      return printerMapper.mapLaptopModelsFromEntities(printerEntityList);
+      return printerMapper.mapPrinterModelsFromEntities(printerEntityList);
   }
   
   @Override        
   public void saveLaptopEntry(LaptopModel laptopModel){
-     LaptopEntity laptopEntity = laptopMapper.mapPrinterEntityFromModel(laptopModel);
+     LaptopEntity laptopEntity = laptopMapper.mapLaptopEntityFromModel(laptopModel);
       inventoryDao.saveLaptopEntity(laptopEntity);
   }
   @Override
   public List<LaptopModel> getAllLaptopEntries(){
       List<LaptopEntity> laptopEntityList = inventoryDao.getAllLaptopEntities();
-      return laptopMapper.mapPrinterModelsFromEntities(laptopEntityList);
+      return laptopMapper.mapLaptopModelsFromEntities(laptopEntityList);
   }
 }
