@@ -1,3 +1,45 @@
+-- SEQUENCE: inventory.desktop_seq
+
+            -- DROP SEQUENCE inventory.desktop_seq;
+
+            CREATE SEQUENCE inventory.desktop_seq
+                INCREMENT 1
+                START 1
+                MINVALUE 0
+                MAXVALUE 9223372036854775807
+                CACHE 1;
+
+            ALTER SEQUENCE inventory.desktop_seq
+                OWNER TO postgres;
+
+                -- SEQUENCE: inventory.laptop_seq
+
+                -- DROP SEQUENCE inventory.laptop_seq;
+
+                CREATE SEQUENCE inventory.laptop_seq
+                    INCREMENT 1
+                    START 1
+                    MINVALUE 0
+                    MAXVALUE 9223372036854775807
+                    CACHE 1;
+
+                ALTER SEQUENCE inventory.laptop_seq
+                    OWNER TO postgres;
+
+                    -- SEQUENCE: inventory.printer_seq
+
+                    -- DROP SEQUENCE inventory.printer_seq;
+
+                    CREATE SEQUENCE inventory.printer_seq
+                        INCREMENT 1
+                        START 1
+                        MINVALUE 0
+                        MAXVALUE 9223372036854775807
+                        CACHE 1;
+
+                    ALTER SEQUENCE inventory.printer_seq
+                        OWNER TO postgres;
+
 -- Table: inventory.desktop
 
 -- DROP TABLE inventory.desktop;
@@ -83,44 +125,3 @@ ALTER TABLE inventory.desktop
         ALTER TABLE inventory.printer
             OWNER to postgres;
 
-            -- SEQUENCE: inventory.desktop_seq
-
-            -- DROP SEQUENCE inventory.desktop_seq;
-
-            CREATE SEQUENCE inventory.desktop_seq
-                INCREMENT 1
-                START 1
-                MINVALUE 0
-                MAXVALUE 9223372036854775807
-                CACHE 1;
-
-            ALTER SEQUENCE inventory.desktop_seq
-                OWNER TO postgres;
-
-                -- SEQUENCE: inventory.laptop_seq
-
-                -- DROP SEQUENCE inventory.laptop_seq;
-
-                CREATE SEQUENCE inventory.laptop_seq
-                    INCREMENT 1
-                    START 1
-                    MINVALUE 0
-                    MAXVALUE 9223372036854775807
-                    CACHE 1;
-
-                ALTER SEQUENCE inventory.laptop_seq
-                    OWNER TO postgres;
-
-                    -- SEQUENCE: inventory.printer_seq
-
-                    -- DROP SEQUENCE inventory.printer_seq;
-
-                    CREATE SEQUENCE inventory.printer_seq
-                        INCREMENT 1
-                        START 1
-                        MINVALUE 0
-                        MAXVALUE 9223372036854775807
-                        CACHE 1;
-
-                    ALTER SEQUENCE inventory.printer_seq
-                        OWNER TO postgres;
