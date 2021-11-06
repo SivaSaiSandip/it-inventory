@@ -21,7 +21,7 @@ public class InventoryContoller {
     public ResponseEntity<Object> saveDesktopDetails(@RequestBody DesktopModel desktopModel){
       
         inventoryService.saveDesktopEntry(desktopModel);
-        return new ResponseEntity<Object>("Success", HttpStatus.OK);
+        return new ResponseEntity<Object>("Desktop Entry Saved Successfully!", HttpStatus.OK);
     }
 
   @GetMapping("/get-desktop-details")
