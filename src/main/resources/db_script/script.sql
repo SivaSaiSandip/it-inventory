@@ -44,6 +44,7 @@
 
 -- DROP TABLE inventory.desktop;
 
+-- Use https://www.sqlines.com/online for DB Migration
 CREATE TABLE IF NOT EXISTS inventory.desktop
 (
     desktop_id bigint NOT NULL DEFAULT nextval('inventory.desktop_seq'::regclass),
