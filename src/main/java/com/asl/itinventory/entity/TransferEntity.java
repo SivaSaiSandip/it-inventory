@@ -7,16 +7,16 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "laptop", schema = "inventory")
-public class LaptopEntity {
-  @Id
-    @GeneratedValue(generator = "laptop_seq")
-    @SequenceGenerator(name = "laptop_seq",schema = "inventory", sequenceName = "laptop_seq", initialValue = 1, allocationSize = 1)
-    private Long laptopId;
-  private String category;
+@Table(name = "transfer", schema = "inventory")
+public class TransferEntity {
+    @Id
+    @GeneratedValue(generator = "transfer_seq")
+    @SequenceGenerator(name = "transfer_seq",schema = "inventory", sequenceName = "transfer_seq", initialValue = 1, allocationSize = 1)
+    private Long transferId;
+    private String category;
     private String userName;
     private String sfid;
-    private Long laptopSno;
+    private Long sno;
     private String model;
     private String designation;
     private String mobile;
