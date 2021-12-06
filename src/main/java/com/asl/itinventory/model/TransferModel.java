@@ -1,19 +1,12 @@
-package com.asl.itinventory.entity;
+package com.asl.itinventory.model;
 
 import lombok.Data;
 
-import javax.persistence.*;
 import java.util.Date;
 
 @Data
-@Entity
-@Table(name = "printer", schema = "inventory")
-public class PrinterEntity {
-  @Id
-    @GeneratedValue(generator = "printer_seq")
-    @SequenceGenerator(name = "printer_seq",schema = "inventory", sequenceName = "printer_seq", initialValue = 1, allocationSize = 1)
+public class TransferModel {
     private Long printerId;
-  private String category;
     private String userName;
     private String sfid;
     private Long printerSno;

@@ -14,6 +14,7 @@ public class DesktopEntity {
     @SequenceGenerator(name = "desktop_seq",schema = "inventory", sequenceName = "desktop_seq", initialValue = 1, allocationSize = 1)
     private Long desktopId;
     private String userName;
+    private String category;
     private String sfid;
     private Long desktopSno;
     private String model;

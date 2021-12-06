@@ -19,4 +19,6 @@ public interface InventoryService {
   void saveLaptopEntry(LaptopModel laptopModel);
   
   List<LaptopModel> getAllLaptopEntries();
+
+  void saveTransferDetails(String sfid);
 }
