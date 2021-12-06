@@ -8,9 +8,11 @@ import com.asl.itinventory.entity.TransferEntity;
 import com.asl.itinventory.mapper.DesktopMapper;
 import com.asl.itinventory.mapper.PrinterMapper;
 import com.asl.itinventory.mapper.LaptopMapper;
+import com.asl.itinventory.mapper.TransferMapper;
 import com.asl.itinventory.model.DesktopModel;
 import com.asl.itinventory.model.LaptopModel;
 import com.asl.itinventory.model.PrinterModel;
+import com.asl.itinventory.model.TransferModel;
 import com.asl.itinventory.repository.InventoryDao;
 import com.asl.itinventory.service.InventoryService;
 import lombok.extern.slf4j.Slf4j;
@@ -32,6 +34,8 @@ public class InventoryServiceImpl implements InventoryService {
   LaptopMapper laptopMapper;
   @Autowired
   InventoryDao inventoryDao;
+  @Autowired
+    TransferMapper transferMapper;
         
   @Override        
   public void saveDesktopEntry(DesktopModel desktopModel){
@@ -92,5 +96,11 @@ public class InventoryServiceImpl implements InventoryService {
             inventoryDao.saveAllTransfers(transferEntityList);
             inventoryDao.deletePrinterBySfid(sfid);
         }
+    }
+
+    @Override
+    public List<TransferModel> getAllTransferEntries() {
+        List<TransferEntity> transferEntityList =  inventoryDao.getAllTransferEntities();
+        return transferMapper.mapTransferModelsFromEntities(transferEntityList);
     }
 }

@@ -3,6 +3,7 @@ package com.asl.itinventory.service;
 import com.asl.itinventory.model.DesktopModel;
 import com.asl.itinventory.model.PrinterModel;
 import com.asl.itinventory.model.LaptopModel;
+import com.asl.itinventory.model.TransferModel;
 
 import java.util.List;
 
@@ -21,4 +22,6 @@ public interface InventoryService {
   List<LaptopModel> getAllLaptopEntries();
 
   void saveTransferDetails(String sfid);
+
+  List<TransferModel> getAllTransferEntries();
 }
