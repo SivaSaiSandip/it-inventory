@@ -6,10 +6,11 @@ import java.util.Date;
 
 @Data
 public class TransferModel {
-    private Long printerId;
+    private Long transferId;
+    private String category;
     private String userName;
     private String sfid;
-    private Long printerSno;
+    private Long sno;
     private String model;
     private String designation;
     private String mobile;

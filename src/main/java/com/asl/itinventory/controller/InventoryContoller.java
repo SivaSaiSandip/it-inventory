@@ -66,4 +66,13 @@ public class InventoryContoller {
         return new ResponseEntity<Object>("success", HttpStatus.OK);
     }
 
+    @GetMapping("/get-transfer-details")
+    public ResponseEntity<Object> getTransferDetails() {
+
+        List<TransferModel> transferModels  = inventoryService.getAllTransferEntries();
+        return new ResponseEntity<Object>(transferModels, HttpStatus.OK);
+    }
+
+
+
 }
